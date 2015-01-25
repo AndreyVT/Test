@@ -3,14 +3,14 @@
     <tr>
         <td>Name</td>
         <td>Description</td>
-        <td><i class="glyphicon-plus"></i></td>
+        <td><a href="#/new/"><i class="glyphicon-plus"></i></a></td>
     </tr>
     </thead>
     <tbody>
     <tr ng-repeat="person in crew">
         <td>{{person.name}}</td>
         <td>{{person.description}}</td>
-        <td><i class="glyphicon-asterisk"></i> </td>
+        <td><a href="#/edit/{{$index}}"><i class="glyphicon-asterisk"></i></a></td>
     </tr>
     </tbody>
 </table>
