@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Description</td>
+        <td><i class="glyphicon-plus"></i></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="person in crew">
+        <td>{{person.name}}</td>
+        <td>{{person.description}}</td>
+        <td><i class="glyphicon-asterisk"></i> </td>
+    </tr>
+    </tbody>
+</table>

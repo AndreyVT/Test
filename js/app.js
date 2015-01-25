@@ -5,21 +5,17 @@
  * Time: 22:15
  * To change this template use File | Settings | File Templates.
  */
-angular
-    .module('app', [
-        'ui.router'
-    ])
-    .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
-        $urlRouterProvider.otherwise('/');
-        $stateProvider
-            .state('home', {
-                url: '/',
-                templateUrl: 'partials/home.html',
-                controller: 'homeCtrl'
-            })
-            .state('about', {
-                url: '/about',
-                templateUrl: 'partials/about.html',
-                controller: 'aboutCtrl'
-            })
-    }])
+angular.module('enterprise', ['ngRoute']).
+    config(function($routeProvider) {
+        $routeProvider.
+            when("/", {templateUrl:"partials/list.html"})
+    })
+
+function AppCtrl($scope)    {
+    $scope.crew =   [
+            {name: "Picard", description:"Captain"},
+            {name: "Andrew", description:"Cat"},
+            {name: "Busygun", description:"Soldier"}
+        ];
+
+}
